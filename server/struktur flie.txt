@@ -1,0 +1,87 @@
+project/
+│
+├── user-service/               # Microservice untuk menangani user-related functionality
+│   ├── src/
+│   │   ├── controllers/        # API controllers untuk user
+│   │   │   └── userController.js
+│   │   ├── models/             # Model untuk user
+│   │   │   └── userModel.js
+│   │   ├── services/           # Layanan logika bisnis untuk user
+│   │   │   └── userService.js
+│   │   ├── routers/            # Routing untuk user
+│   │   │   └── userRoutes.js
+│   │   ├── db/                 # Koneksi dan konfigurasi database PostgreSQL untuk user
+│   │   │   └── dbconfig.js
+│   │   ├── utils/              # Utilitas seperti middleware dan helper
+│   │   │   └── authUtils.js    # Middleware untuk autentikasi JWT / Firebase
+│   │   └── index.js            # Entry point service
+│   ├── .env                    # Environment variables untuk user service
+│   ├── package.json            # Dependensi dan skrip NPM untuk user service
+│   └── README.md               # Dokumentasi untuk user service
+│
+├── transaction-service/        # Microservice untuk transaksi
+│   ├── src/
+│   │   ├── controllers/        # API controllers untuk transaksi
+│   │   │   └── transactionController.js
+│   │   ├── models/             # Model untuk transaksi
+│   │   │   └── transactionModel.js
+│   │   ├── services/           # Layanan logika bisnis untuk transaksi
+│   │   │   └── transactionService.js
+│   │   ├── routers/            # Routing untuk transaksi
+│   │   │   └── transactionRoutes.js
+│   │   ├── db/                 # Koneksi dan konfigurasi database PostgreSQL untuk transaksi
+│   │   │   └── dbconfig.js
+│   │   ├── utils/              # Utilitas untuk validasi atau helper transaksi
+│   │   │   └── transactionUtils.js
+│   │   └── index.js            # Entry point service
+│   ├── .env                    # Environment variables untuk transaction service
+│   ├── package.json            # Dependensi dan skrip NPM untuk transaction service
+│   └── README.md               # Dokumentasi untuk transaction service
+│
+├── notification-service/       # Microservice untuk notifikasi
+│   ├── src/
+│   │   ├── controllers/        # API controllers untuk notifikasi
+│   │   │   └── notificationController.js
+│   │   ├── models/             # Model untuk log notifikasi
+│   │   │   └── notificationModel.js
+│   │   ├── services/           # Layanan logika bisnis untuk notifikasi
+│   │   │   └── notificationService.js
+│   │   ├── routers/            # Routing untuk notifikasi
+│   │   │   └── notificationRoutes.js
+│   │   ├── db/                 # Koneksi ke PostgreSQL untuk log notifikasi
+│   │   │   └── dbconfig.js
+│   │   ├── utils/              # Utilitas untuk mengintegrasikan Firebase
+│   │   │   └── firebaseUtils.js # Firebase Cloud Messaging untuk push notification
+│   │   └── index.js            # Entry point service
+│   ├── .env                    # Environment variables untuk notification service
+│   ├── package.json            # Dependensi dan skrip NPM untuk notification service
+│   └── README.md               # Dokumentasi untuk notification service
+│
+├── gateway/                    # API Gateway untuk mengatur rute ke microservices
+│   ├── src/
+│   │   ├── routes/             # Routes untuk API Gateway
+│   │   │   └── gatewayRoutes.js
+│   │   ├── controllers/        # Controller untuk API Gateway
+│   │   │   └── gatewayController.js
+│   │   └── index.js            # Entry point untuk API Gateway
+│   ├── .env                    # Environment variables untuk gateway
+│   ├── package.json            # Dependensi dan skrip NPM untuk API Gateway
+│   └── README.md               # Dokumentasi untuk API Gateway
+│
+├── shared-libs/                # Library yang dapat digunakan ulang oleh semua service
+│   ├── logger.js               # Logger untuk debugging
+│   ├── errorHandler.js         # Middleware untuk menangani error secara global
+│   ├── constants.js            # Konstanta umum
+│   └── utils.js                # Fungsi utility seperti format tanggal
+│
+├── docker/                     # Konfigurasi Docker untuk semua microservices
+│   ├── docker-compose.yml      # Menjalankan semua layanan dalam satu file konfigurasi
+│   ├── postgres/               # Konfigurasi PostgreSQL
+│   │   └── init.sql            # Script untuk inisialisasi database
+│   └── Dockerfile              # Dockerfile untuk setiap microservice
+│
+├── firebase/                   # Konfigurasi Firebase
+│   ├── firebase-admin-sdk.json # File kredensial Firebase Admin SDK
+│   └── firebaseConfig.js       # Konfigurasi Firebase untuk setiap service
+│
+└── README.md                   # Dokumentasi umum proyek dan arsitektur

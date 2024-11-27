@@ -1,0 +1,13 @@
+{
+    "scripts": {
+      "dev:gateway": "nodemon gateway/index.js",
+      "dev:notification": "nodemon notification_services/index.js",
+      "dev:transaction": "nodemon transaction_services/index.js",
+      "dev:user": "nodemon user_services/index.js",
+      "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:notification\" \"npm run dev:transaction\" \"npm run dev:user\"",
+      "start": "pm2 start ecosystem.config.js --env development",
+      "stop": "pm2 stop ecosystem.config.js",
+      "restart": "pm2 restart ecosystem.config.js"
+    }
+  }
+  

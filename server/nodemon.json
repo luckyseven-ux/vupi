@@ -1,0 +1,7 @@
+{
+  "watch": ["gateway", "notification_services", "transaction_services", "user_services"],
+  "execMap": {
+    "js": "node"
+  },
+  "exec": "start nodemon gateway/index.js && start nodemon notification_services/index.js && start nodemon transaction_services/index.js && start nodemon user_services/index.js"
+}

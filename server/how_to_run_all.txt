@@ -1,0 +1,29 @@
+Langkah 4: Menjalankan Aplikasi
+Untuk menjalankan aplikasi menggunakan nodemon dan concurrently, jalankan perintah:
+
+bash
+Salin kode
+npm run dev
+Ini akan memulai semua layanan dalam mode pengembangan menggunakan nodemon secara bersamaan.
+
+Jika Anda ingin menjalankan aplikasi menggunakan PM2 di lingkungan pengembangan atau produksi, gunakan perintah berikut:
+
+Untuk memulai aplikasi dengan PM2 (development):
+
+bash
+Salin kode
+npm start
+Untuk menghentikan aplikasi:
+
+bash
+Salin kode
+npm run stop
+Untuk memulai ulang aplikasi:
+
+bash
+Salin kode
+npm run restart
+Keuntungan Menggunakan PM2 dengan npm run dev:
+Pemantauan dan Manajemen Proses: PM2 memberikan manajemen proses yang lebih canggih dan memungkinkan Anda untuk melihat log, memulai ulang aplikasi secara otomatis, dan menjaga aplikasi tetap berjalan.
+Pengelolaan Beberapa Layanan: PM2 memudahkan untuk menangani banyak microservices atau aplikasi dalam satu perintah.
+Dengan pengaturan ini, Anda akan dapat mengembangkan dan mengelola aplikasi Anda dengan lebih efisien menggunakan PM2 dan nodemon di dalam satu terminal.
